@@ -40,7 +40,7 @@ def upload(filename, label):
         auth=(credentials["username"], credentials["password"]),
     )
 
-    data = json.load(open(filename))
+    data = json.load(open(filename, encoding="utf-8"))
 
     print("[0/1] Deleting " + label)
     graph.run("MATCH (n:" + label + ") DETACH DELETE n")
