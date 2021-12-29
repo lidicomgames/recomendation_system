@@ -2,6 +2,9 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/")
-def index():
-    return "<h5>Main App</h5>"
+@app.route("/<user>/orders")
+def index(user):
+    return f"""
+        <h3>{user}
+        <h5>0 Orders</h5>
+    """
