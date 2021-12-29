@@ -18,7 +18,6 @@ graph.run("MATCH p=()-[b]->(o)-[w]->() DELETE b, o, w")
 orders = []
 user_order_relation = []
 order_product_relation = []
-
 order_code = 0
 
 print("[1/3] Creating Orders")
